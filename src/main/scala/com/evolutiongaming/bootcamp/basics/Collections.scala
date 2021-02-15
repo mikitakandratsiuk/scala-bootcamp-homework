@@ -1,4 +1,4 @@
-package com.evolutiongaming.bootcamp
+package com.evolutiongaming.bootcamp.basics
 
 object CollectionsLeetcode extends App {
   def runningSum(nums: Array[Int]): Array[Int] = nums.scanLeft(0)(_ + _).tail

@@ -1,6 +1,4 @@
-package com.evolutiongaming.bootcamp
-
-import com.evolutiongaming.bootcamp.ControlStructures.Command.{Average, Divide, Max, Min, Sum}
+package com.evolutiongaming.bootcamp.basics
 
 import scala.io.Source
 

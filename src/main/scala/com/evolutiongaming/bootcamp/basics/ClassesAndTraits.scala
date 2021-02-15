@@ -1,4 +1,4 @@
-package com.evolutiongaming.bootcamp
+package com.evolutiongaming.bootcamp.basics
 
 object ClassesAndTraits {
 
@@ -201,4 +201,5 @@ object ClassesAndTraits {
 
     override def z: Double = leftBottom.z
   }
+
 }

@@ -1,4 +1,4 @@
-package com.evolutiongaming.bootcamp
+package com.evolutiongaming.bootcamp.basics
 
 import scala.annotation.tailrec
 

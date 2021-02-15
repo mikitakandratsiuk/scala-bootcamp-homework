@@ -1,6 +1,6 @@
-package com.evolutiongaming.bootcamp
+package com.evolutiongaming.bootcamp.basics
 
-import com.evolutiongaming.bootcamp.Basics._
+import Basics._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers._
 

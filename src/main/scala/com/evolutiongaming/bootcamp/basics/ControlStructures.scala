@@ -47,6 +47,8 @@ object ControlStructures {
 
   }
 
+  import Command._
+
   final case class ErrorMessage(value: String)
 
   final case class Result(command: Command, result: Double) {

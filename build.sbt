@@ -1,7 +1,7 @@
 name := "scala-bootcamp-homework"
 version := "1.0"
 
-scalaVersion := "2.13.4"
+scalaVersion := "2.12.12"
 
 // From https://tpolecat.github.io/2017/04/25/scalac-flags.html
 scalacOptions ++= Seq(
@@ -77,3 +77,16 @@ libraryDependencies ++= Seq(
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.1" cross CrossVersion.full)
 
 run / fork := true
+
+lazy val dependenciesDiff = taskKey[Classpath]("Custom task. Dependencies diff between Compile and Test configs")
+
+dependenciesDiff := Def.task {
+  // 1. find fullClasspathAsJars in Compile scope
+  // 2. find fullClasspathAsJars in Test scope
+  // 3. find differences between scopes
+  val testJars = (Test / fullClasspathAsJars).value
+  val compileJars = (fullClasspathAsJars in Compile).value
+  testJars.filterNot(x => compileJars.contains(x))
+}.value
+
+sbtPlugin := true

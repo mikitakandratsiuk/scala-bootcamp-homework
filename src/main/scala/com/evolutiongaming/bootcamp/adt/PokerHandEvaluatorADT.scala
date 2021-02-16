@@ -70,17 +70,6 @@ object BoardWithHands {
 
 final case class TestResult(hand: Hand, combination: Combination)
 
-trait TexasHoldemBoardEvaluator{
-  def evaluateResult(board: Board, hands: List[TexasHoldemHand]): TestResult
-}
-
-trait OmahaHoldemBoardEvaluator{
-  def evaluateResult(board: Board, hands: List[OmahaHoldemHand]): TestResult
-}
-
-class BoardEvaluator(holdemEvaluator: TexasHoldemBoardEvaluator, omahaEvaluator: OmahaHoldemBoardEvaluator) {
-  def evaluateResult(board: Board, hands: List[Hand]): TestResult = hands match {
-    case list:List[TexasHoldemHand] => holdemEvaluator.evaluateResult(board, list)
-    case list:List[OmahaHoldemHand] => omahaEvaluator.evaluateResult(board, list)
-  }
+class BoardEvaluator(board: Board, hands: List[Hand]) {
+  def evaluateResult(board: Board, hands: List[Hand]): List[TestResult] = ???
 }
